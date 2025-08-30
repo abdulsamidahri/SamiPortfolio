@@ -254,16 +254,16 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-sky-100 via-cyan-100 to-blue-100">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary/10 via-accent/10 to-primary/15">
         {/* Decorative wave */}
         <div className="absolute inset-0 opacity-30">
           <svg className="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="url(#heroGradient)" d="M0,64L48,80C96,96,192,128,288,160C384,192,480,224,576,202.7C672,181,768,107,864,85.3C960,64,1056,96,1152,128C1248,160,1344,192,1392,208L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"/>
             <defs>
               <linearGradient id="heroGradient" x1="0" x2="1">
-                <stop offset="0%" stopColor="hsl(175 80% 70%)" />
-                <stop offset="50%" stopColor="hsl(200 80% 70%)" />
-                <stop offset="100%" stopColor="hsl(220 80% 70%)" />
+                <stop offset="0%" stopColor="hsl(210 100% 45%)" />
+                <stop offset="50%" stopColor="hsl(190 85% 55%)" />
+                <stop offset="100%" stopColor="hsl(210 100% 50%)" />
               </linearGradient>
             </defs>
           </svg>
@@ -1009,8 +1009,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-semibold mb-4">Dr. Abdul Sami</h3>
-            <p className="text-gray-300 mb-6">Assistant Professor, Department of Microbiology</p>
-            <p className="text-gray-300 mb-8">Government College University Hyderabad</p>
+            <p className="text-white/80 mb-6">Assistant Professor, Department of Microbiology</p>
+            <p className="text-white/80 mb-8">Government College University Hyderabad</p>
             
             <div className="flex justify-center gap-6 mb-8">
               <Button size="sm" asChild className="rounded-full w-12 h-12" data-testid="footer-email-button">
@@ -1035,8 +1035,8 @@ export default function Home() {
               </Button>
             </div>
             
-            <div className="border-t border-gray-700 pt-8">
-              <p className="text-gray-400 text-sm">
+            <div className="border-t border-white/20 pt-8">
+              <p className="text-white/60 text-sm">
                 © 2025 Dr. Abdul Sami. Professional Academic Portfolio.
               </p>
             </div>
