@@ -277,7 +277,7 @@ export default function Home() {
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4">
                 Dr. <span className="gradient-text">Abdul Sami</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-6">
+              <p className="text-xl lg:text-2xl text-muted-foreground mb-6 font-bold">
                 Assistant Professor, Department of Microbiology
               </p>
               <p className="text-lg text-muted-foreground mb-8">
