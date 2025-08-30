@@ -310,6 +310,12 @@ export default function Home() {
                     <span>X</span>
                   </a>
                 </Button>
+                <Button variant="outline" asChild className="shadow-md" data-testid="hero-scholar-button">
+                  <a href="https://scholar.google.com/citations?user=FYYwND0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                    <GraduationCap className="w-4 h-4" />
+                    <span>Scholar</span>
+                  </a>
+                </Button>
               </div>
               
               {/* Research Highlights */}
