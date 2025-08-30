@@ -316,6 +316,12 @@ export default function Home() {
                     <span>Scholar</span>
                   </a>
                 </Button>
+                <Button variant="outline" asChild className="shadow-md" data-testid="hero-orcid-button">
+                  <a href="https://orcid.org/0000-0002-9841-437X" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                    <Award className="w-4 h-4" />
+                    <span>ORCID</span>
+                  </a>
+                </Button>
               </div>
               
               {/* Research Highlights */}
