@@ -204,7 +204,7 @@ export default function Home() {
       {/* Solid Navigation Bar */}
       <header className="fixed top-0 left-0 right-0 z-50 nav-solid-override" style={{ backgroundColor: '#ffffff !important', borderBottom: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', background: '#ffffff !important' }} key="nav-2025">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-16 font-bold text-[17px] ml-[5px] mr-[5px] mt-[5px] mb-[5px] pl-[0px] pr-[0px] pt-[0px] pb-[0px]">
             <div className="font-semibold text-foreground">Dr. Abdul Sami</div>
             
             {/* Desktop Navigation */}
@@ -252,10 +252,8 @@ export default function Home() {
           </div>
         )}
       </header>
-      
       {/* Add top padding to account for fixed header */}
       <div className="pt-16"></div>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-primary/10 via-accent/10 to-primary/15">
         {/* Decorative wave */}
@@ -343,7 +341,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* About Section */}
       <section id="about" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -434,7 +431,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Research Section */}
       <section id="research" className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -461,7 +457,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Publications Section */}
       <section id="publications" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -551,7 +546,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Teaching Section */}
       <section id="teaching" className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -620,7 +614,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Certifications Section */}
       <section id="certifications" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -770,7 +763,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Experience & Roles Section */}
       <section className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -848,7 +840,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Contact & References Section */}
       <section id="contact" className="py-20 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1006,7 +997,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-foreground text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
