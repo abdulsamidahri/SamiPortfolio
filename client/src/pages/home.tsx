@@ -541,14 +541,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex flex-col items-center justify-center gap-6">
-              <div className="relative w-24 h-24 mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full transform rotate-3"></div>
-                <img 
-                  src={professionalPhoto3}
-                  alt="Dr. Abdul Sami formal portrait" 
-                  className="relative w-full h-full object-cover rounded-full shadow-lg border-2 border-white"
-                  data-testid="teaching-professional-photo"
-                />
+              <div className="relative w-32 h-32 mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full transform rotate-3 scale-110"></div>
+                <div className="relative w-full h-full rounded-full overflow-hidden shadow-lg border-4 border-white bg-white">
+                  <img 
+                    src={professionalPhoto3}
+                    alt="Dr. Abdul Sami formal portrait" 
+                    className="w-full h-full object-cover object-center"
+                    data-testid="teaching-professional-photo"
+                  />
+                </div>
               </div>
               <div className="w-full">
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-center">Teaching Experience</h2>
