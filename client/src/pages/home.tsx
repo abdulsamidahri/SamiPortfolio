@@ -326,14 +326,13 @@ export default function Home() {
             {/* Professional Photo */}
             <div className="animate-fade-in">
               <div className="relative max-w-md mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl transform rotate-3"></div>
                 <img 
                   src={professionalPhoto1}
                   alt="Dr. Abdul Sami professional headshot" 
-                  className="relative w-full h-auto rounded-2xl shadow-2xl border-4 border-white"
+                  className="w-full h-auto rounded-2xl border-4 border-white"
                   data-testid="hero-professional-photo"
                 />
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg">
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center">
                   <Microscope className="w-8 h-8 text-white" />
                 </div>
               </div>
