@@ -202,7 +202,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Sticky Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-border shadow-md">
+      <nav className="sticky top-0 z-50 bg-white/100 border-b border-border shadow-lg backdrop-blur-none" style={{ backgroundColor: 'white' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="font-semibold text-foreground">Dr. Abdul Sami</div>

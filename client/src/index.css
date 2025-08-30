@@ -51,6 +51,13 @@
   --spacing: 0.25rem;
 }
 
+/* Force solid navigation styling */
+nav.sticky {
+  background-color: white !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
 .dark {
   --background: hsl(0, 0%, 0%);
   --foreground: hsl(200, 6.6667%, 91.1765%);
