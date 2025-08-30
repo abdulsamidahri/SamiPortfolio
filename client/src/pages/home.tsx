@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -24,7 +25,9 @@ import {
   Brain,
   Heart,
   Activity,
-  FileText
+  FileText,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 import professionalPhoto1 from "@assets/WhatsApp Image 2025-08-25 at 18.52.08_95804655_1756534713837.jpg";
 import professionalPhoto2 from "@assets/WhatsApp Image 2025-08-25 at 21.52.10_8d0a8574_1756534713839.jpg";
@@ -34,6 +37,17 @@ import professionalPhoto4 from "@assets/WhatsApp Image 2025-08-25 at 22.05.36_4f
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showAllPublications, setShowAllPublications] = useState(false);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    align: 'start',
+    slidesToScroll: 1,
+    breakpoints: {
+      '(min-width: 768px)': { slidesToScroll: 2 },
+      '(min-width: 1024px)': { slidesToScroll: 3 }
+    }
+  });
+
+  const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
+  const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
   useEffect(() => {
     // Smooth scrolling behavior
@@ -601,109 +615,141 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => {
-              const getCategoryIcon = (category: string) => {
-                switch (category) {
-                  case "Artificial Intelligence":
-                    return <Brain className="w-5 h-5" />;
-                  case "Academic Integrity":
-                    return <Shield className="w-5 h-5" />;
-                  case "Public Health":
-                    return <Heart className="w-5 h-5" />;
-                  case "Healthcare Design":
-                    return <Activity className="w-5 h-5" />;
-                  case "Neuroscience":
-                    return <Brain className="w-5 h-5" />;
-                  case "Research Presentation":
-                    return <Award className="w-5 h-5" />;
-                  default:
-                    return <FileText className="w-5 h-5" />;
-                }
-              };
+          {/* Carousel Navigation */}
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={scrollPrev}
+                className="w-10 h-10 p-0"
+                data-testid="carousel-prev-button"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={scrollNext}
+                className="w-10 h-10 p-0"
+                data-testid="carousel-next-button"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+            </div>
+            <div className="text-sm text-muted-foreground">
+              Swipe or use arrows to navigate
+            </div>
+          </div>
 
-              const getCategoryColor = (category: string) => {
-                switch (category) {
-                  case "Artificial Intelligence":
-                    return "from-blue-500 to-purple-500";
-                  case "Academic Integrity":
-                    return "from-green-500 to-emerald-500";
-                  case "Public Health":
-                    return "from-red-500 to-pink-500";
-                  case "Healthcare Design":
-                    return "from-orange-500 to-amber-500";
-                  case "Neuroscience":
-                    return "from-indigo-500 to-purple-500";
-                  case "Research Presentation":
-                    return "from-teal-500 to-cyan-500";
-                  default:
-                    return "from-primary to-accent";
-                }
-              };
+          {/* Interactive Carousel */}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6">
+              {certifications.map((cert, index) => {
+                const getCategoryIcon = (category: string) => {
+                  switch (category) {
+                    case "Artificial Intelligence":
+                      return <Brain className="w-5 h-5" />;
+                    case "Academic Integrity":
+                      return <Shield className="w-5 h-5" />;
+                    case "Public Health":
+                      return <Heart className="w-5 h-5" />;
+                    case "Healthcare Design":
+                      return <Activity className="w-5 h-5" />;
+                    case "Neuroscience":
+                      return <Brain className="w-5 h-5" />;
+                    case "Research Presentation":
+                      return <Award className="w-5 h-5" />;
+                    default:
+                      return <FileText className="w-5 h-5" />;
+                  }
+                };
 
-              return (
-                <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className={`w-10 h-10 bg-gradient-to-r ${getCategoryColor(cert.category)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>
-                        {getCategoryIcon(cert.category)}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`inline-block px-2 py-1 text-xs rounded-full bg-gradient-to-r ${getCategoryColor(cert.category)} text-white`}>
-                            {cert.category}
-                          </span>
+                const getCategoryColor = (category: string) => {
+                  switch (category) {
+                    case "Artificial Intelligence":
+                      return "from-blue-500 to-purple-500";
+                    case "Academic Integrity":
+                      return "from-green-500 to-emerald-500";
+                    case "Public Health":
+                      return "from-red-500 to-pink-500";
+                    case "Healthcare Design":
+                      return "from-orange-500 to-amber-500";
+                    case "Neuroscience":
+                      return "from-indigo-500 to-purple-500";
+                    case "Research Presentation":
+                      return "from-teal-500 to-cyan-500";
+                    default:
+                      return "from-primary to-accent";
+                  }
+                };
+
+                return (
+                  <div key={index} className="flex-none w-80 md:w-96">
+                    <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary h-full">
+                      <CardContent className="p-6">
+                        <div className="flex items-start gap-4 mb-4">
+                          <div className={`w-10 h-10 bg-gradient-to-r ${getCategoryColor(cert.category)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>
+                            {getCategoryIcon(cert.category)}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className={`inline-block px-2 py-1 text-xs rounded-full bg-gradient-to-r ${getCategoryColor(cert.category)} text-white`}>
+                                {cert.category}
+                              </span>
+                            </div>
+                            <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight">
+                              {cert.title}
+                            </h3>
+                          </div>
                         </div>
-                        <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight">
-                          {cert.title}
-                        </h3>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <BookOpen className="w-4 h-4 flex-shrink-0" />
-                        <span className="font-medium">{cert.issuer}</span>
-                      </div>
-                      
-                      {cert.instructor && (
-                        <div className="flex items-center gap-2">
-                          <GraduationCap className="w-4 h-4 flex-shrink-0" />
-                          <span>Instructor: {cert.instructor}</span>
+                        
+                        <div className="space-y-2 text-sm text-muted-foreground">
+                          <div className="flex items-center gap-2">
+                            <BookOpen className="w-4 h-4 flex-shrink-0" />
+                            <span className="font-medium">{cert.issuer}</span>
+                          </div>
+                          
+                          {cert.instructor && (
+                            <div className="flex items-center gap-2">
+                              <GraduationCap className="w-4 h-4 flex-shrink-0" />
+                              <span>Instructor: {cert.instructor}</span>
+                            </div>
+                          )}
+                          
+                          <div className="flex items-center gap-2">
+                            <Award className="w-4 h-4 flex-shrink-0" />
+                            <span>{cert.date}</span>
+                          </div>
+                          
+                          {cert.description && (
+                            <p className="text-xs mt-3 text-muted-foreground/80">
+                              {cert.description}
+                            </p>
+                          )}
                         </div>
-                      )}
-                      
-                      <div className="flex items-center gap-2">
-                        <Award className="w-4 h-4 flex-shrink-0" />
-                        <span>{cert.date}</span>
-                      </div>
-                      
-                      {cert.description && (
-                        <p className="text-xs mt-3 text-muted-foreground/80">
-                          {cert.description}
-                        </p>
-                      )}
-                    </div>
-                    
-                    {cert.verificationUrl && (
-                      <div className="mt-4 pt-4 border-t">
-                        <Button variant="outline" size="sm" asChild data-testid={`cert-verify-${index}`}>
-                          <a 
-                            href={cert.verificationUrl} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-xs"
-                          >
-                            <ExternalLink className="w-3 h-3" />
-                            Verify Certificate
-                          </a>
-                        </Button>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              );
-            })}
+                        
+                        {cert.verificationUrl && (
+                          <div className="mt-4 pt-4 border-t">
+                            <Button variant="outline" size="sm" asChild data-testid={`cert-verify-${index}`}>
+                              <a 
+                                href={cert.verificationUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-xs"
+                              >
+                                <ExternalLink className="w-3 h-3" />
+                                Verify Certificate
+                              </a>
+                            </Button>
+                          </div>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
