@@ -19,7 +19,12 @@ import {
   ChevronUp,
   ExternalLink,
   Menu,
-  X
+  X,
+  Shield,
+  Brain,
+  Heart,
+  Activity,
+  FileText
 } from "lucide-react";
 import professionalPhoto1 from "@assets/WhatsApp Image 2025-08-25 at 18.52.08_95804655_1756534713837.jpg";
 import professionalPhoto2 from "@assets/WhatsApp Image 2025-08-25 at 21.52.10_8d0a8574_1756534713839.jpg";
@@ -54,6 +59,7 @@ export default function Home() {
     { href: "#research", label: "Research" },
     { href: "#publications", label: "Publications" },
     { href: "#teaching", label: "Teaching" },
+    { href: "#certifications", label: "Certifications" },
     { href: "#contact", label: "Contact" }
   ];
 
@@ -126,6 +132,54 @@ export default function Home() {
       icon: <GraduationCap className="w-6 h-6" />,
       title: "Academic Leadership",
       description: "Graduate and postgraduate instruction with technical leadership expertise."
+    }
+  ];
+
+  const certifications = [
+    {
+      title: "AI for Everyone",
+      issuer: "DeepLearning.AI (Coursera)",
+      instructor: "Andrew Ng",
+      date: "July 31, 2023",
+      category: "Artificial Intelligence",
+      verificationUrl: "https://coursera.org/verify/EMWKV4MDN5YD"
+    },
+    {
+      title: "The Art of Academic Honesty: Plagiarism Unpacked",
+      issuer: "Higher Education Commission",
+      provider: "ProQuest",
+      date: "January 25, 2022",
+      category: "Academic Integrity",
+      description: "Training session on academic honesty and plagiarism prevention"
+    },
+    {
+      title: "COVID-19: Operational Planning Guidelines",
+      issuer: "WHO/UNCT",
+      date: "April 13, 2020",
+      category: "Public Health",
+      description: "Partners Platform to support country preparedness and response"
+    },
+    {
+      title: "SARI Treatment Facility Design",
+      issuer: "WHO",
+      date: "April 13, 2020",
+      category: "Healthcare Design",
+      description: "Severe Acute Respiratory Infection treatment facility planning"
+    },
+    {
+      title: "Biohacking Your Brain's Health",
+      issuer: "Emory University (Coursera)",
+      instructor: "Dr. Karima Benameur, MD",
+      date: "December 13, 2018",
+      category: "Neuroscience",
+      verificationUrl: "https://coursera.org/verify/PAAMCH5ECGQZ"
+    },
+    {
+      title: "International Conference Paper Presentation",
+      issuer: "Conference Organization",
+      date: "2022",
+      category: "Research Presentation",
+      description: "Certificate of presentation of research paper at international conference"
     }
   ];
 
@@ -507,8 +561,126 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Certifications & Training</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground">
+              Professional development through specialized training programs and certifications
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certifications.map((cert, index) => {
+              const getCategoryIcon = (category: string) => {
+                switch (category) {
+                  case "Artificial Intelligence":
+                    return <Brain className="w-5 h-5" />;
+                  case "Academic Integrity":
+                    return <Shield className="w-5 h-5" />;
+                  case "Public Health":
+                    return <Heart className="w-5 h-5" />;
+                  case "Healthcare Design":
+                    return <Activity className="w-5 h-5" />;
+                  case "Neuroscience":
+                    return <Brain className="w-5 h-5" />;
+                  case "Research Presentation":
+                    return <Award className="w-5 h-5" />;
+                  default:
+                    return <FileText className="w-5 h-5" />;
+                }
+              };
+
+              const getCategoryColor = (category: string) => {
+                switch (category) {
+                  case "Artificial Intelligence":
+                    return "from-blue-500 to-purple-500";
+                  case "Academic Integrity":
+                    return "from-green-500 to-emerald-500";
+                  case "Public Health":
+                    return "from-red-500 to-pink-500";
+                  case "Healthcare Design":
+                    return "from-orange-500 to-amber-500";
+                  case "Neuroscience":
+                    return "from-indigo-500 to-purple-500";
+                  case "Research Presentation":
+                    return "from-teal-500 to-cyan-500";
+                  default:
+                    return "from-primary to-accent";
+                }
+              };
+
+              return (
+                <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`w-10 h-10 bg-gradient-to-r ${getCategoryColor(cert.category)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>
+                        {getCategoryIcon(cert.category)}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className={`inline-block px-2 py-1 text-xs rounded-full bg-gradient-to-r ${getCategoryColor(cert.category)} text-white`}>
+                            {cert.category}
+                          </span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight">
+                          {cert.title}
+                        </h3>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <BookOpen className="w-4 h-4 flex-shrink-0" />
+                        <span className="font-medium">{cert.issuer}</span>
+                      </div>
+                      
+                      {cert.instructor && (
+                        <div className="flex items-center gap-2">
+                          <GraduationCap className="w-4 h-4 flex-shrink-0" />
+                          <span>Instructor: {cert.instructor}</span>
+                        </div>
+                      )}
+                      
+                      <div className="flex items-center gap-2">
+                        <Award className="w-4 h-4 flex-shrink-0" />
+                        <span>{cert.date}</span>
+                      </div>
+                      
+                      {cert.description && (
+                        <p className="text-xs mt-3 text-muted-foreground/80">
+                          {cert.description}
+                        </p>
+                      )}
+                    </div>
+                    
+                    {cert.verificationUrl && (
+                      <div className="mt-4 pt-4 border-t">
+                        <Button variant="outline" size="sm" asChild data-testid={`cert-verify-${index}`}>
+                          <a 
+                            href={cert.verificationUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-xs"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            Verify Certificate
+                          </a>
+                        </Button>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Experience & Roles Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Professional Experience */}
