@@ -275,7 +275,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4">
-                Dr. <span className="gradient-text">Abdul Sami</span>
+                Dr. <span className="gradient-text text-[#396fbd]">Abdul Sami</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground mb-6 font-bold">
                 Assistant Professor, Department of Microbiology
