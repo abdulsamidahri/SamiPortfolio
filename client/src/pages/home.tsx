@@ -204,7 +204,7 @@ export default function Home() {
       {/* Solid Navigation Bar */}
       <header className="fixed top-0 left-0 right-0 z-50 nav-solid-override" style={{ backgroundColor: '#ffffff !important', borderBottom: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', background: '#ffffff !important' }} key="nav-2025">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 font-bold text-[17px] ml-[5px] mr-[5px] mt-[5px] mb-[5px] pl-[0px] pr-[0px] pt-[0px] pb-[0px]">
+          <div className="flex justify-between items-center h-16 text-[17px] ml-[5px] mr-[5px] mt-[5px] mb-[5px] pl-[0px] pr-[0px] pt-[0px] pb-[0px] font-bold bg-[#004182]">
             <div className="font-semibold text-foreground">Dr. Abdul Sami</div>
             
             {/* Desktop Navigation */}
