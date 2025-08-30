@@ -202,7 +202,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50">
       {/* Sticky Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-border shadow-sm">
+      <nav className="sticky top-0 z-50 bg-white border-b border-border shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="font-semibold text-foreground">Dr. Abdul Sami</div>
@@ -236,7 +236,7 @@ export default function Home() {
         
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-border">
+          <div className="md:hidden bg-white border-t border-border">
             <div className="px-4 py-3 space-y-3">
               {navLinks.map((link) => (
                 <a 
