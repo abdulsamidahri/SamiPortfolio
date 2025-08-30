@@ -285,7 +285,7 @@ export default function Home() {
               {/* Research Highlights */}
               <div className="grid grid-cols-2 gap-3">
                 <Card className="p-4">
-                  <div className="text-2xl font-bold text-primary">15+</div>
+                  <div className="text-2xl font-bold text-primary">23</div>
                   <div className="text-sm text-muted-foreground">Publications</div>
                 </Card>
                 <Card className="p-4">
