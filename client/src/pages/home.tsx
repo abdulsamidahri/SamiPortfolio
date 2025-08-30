@@ -270,74 +270,7 @@ export default function Home() {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4">
-                Dr. <span className="gradient-text">Abdul Sami</span>
-              </h1>
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-6">
-                Assistant Professor, Department of Microbiology
-              </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                Government College University Hyderabad
-              </p>
-              
-              {/* Quick Contact */}
-              <div className="flex flex-wrap gap-4 mb-8">
-                <Button asChild className="shadow-md" data-testid="hero-email-button">
-                  <a href="mailto:abdulsamidahri@gcuh.edu.pk" className="inline-flex items-center gap-2">
-                    <Mail className="w-4 h-4" />
-                    <span>Email</span>
-                  </a>
-                </Button>
-                <Button variant="outline" asChild className="shadow-md" data-testid="hero-phone-button">
-                  <a href="tel:+923333979737" className="inline-flex items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    <span>Call</span>
-                  </a>
-                </Button>
-                <Button variant="outline" asChild className="shadow-md" data-testid="hero-github-button">
-                  <a href="https://github.com/abdulsamidahri" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
-                    <Github className="w-4 h-4" />
-                    <span>GitHub</span>
-                  </a>
-                </Button>
-                <Button variant="outline" asChild className="shadow-md" data-testid="hero-twitter-button">
-                  <a href="https://x.com/sameedahri" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
-                    <Twitter className="w-4 h-4" />
-                    <span>X</span>
-                  </a>
-                </Button>
-              </div>
-              
-              {/* Research Highlights */}
-              <div className="grid grid-cols-2 gap-3">
-                <Card className="p-4">
-                  <div className="text-2xl font-bold text-primary">23</div>
-                  <div className="text-sm text-muted-foreground">Publications</div>
-                </Card>
-                <Card className="p-4">
-                  <div className="text-2xl font-bold text-primary">11+</div>
-                  <div className="text-sm text-muted-foreground">Years Teaching</div>
-                </Card>
-              </div>
-            </div>
-            
-            {/* Professional Photo */}
-            <div className="animate-fade-in">
-              <div className="relative max-w-md mx-auto">
-                <img 
-                  src={professionalPhoto1}
-                  alt="Dr. Abdul Sami professional headshot" 
-                  className="w-full h-auto rounded-2xl border-4 border-white"
-                  data-testid="hero-professional-photo"
-                />
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center">
-                  <Microscope className="w-8 h-8 text-white" />
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
 
