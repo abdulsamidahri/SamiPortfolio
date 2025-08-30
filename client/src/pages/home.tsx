@@ -309,47 +309,18 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Professional Photos Gallery */}
+            {/* Professional Photo */}
             <div className="animate-fade-in">
-              <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl transform rotate-1"></div>
-                  <img 
-                    src={professionalPhoto1}
-                    alt="Dr. Abdul Sami professional headshot" 
-                    className="relative w-full h-auto rounded-xl shadow-xl border-2 border-white"
-                    data-testid="hero-professional-photo-1"
-                  />
-                </div>
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-xl transform -rotate-1"></div>
-                  <img 
-                    src={professionalPhoto2}
-                    alt="Dr. Abdul Sami at university event" 
-                    className="relative w-full h-auto rounded-xl shadow-xl border-2 border-white"
-                    data-testid="hero-professional-photo-2"
-                  />
-                </div>
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl transform -rotate-2"></div>
-                  <img 
-                    src={professionalPhoto3}
-                    alt="Dr. Abdul Sami formal portrait" 
-                    className="relative w-full h-auto rounded-xl shadow-xl border-2 border-white"
-                    data-testid="hero-professional-photo-3"
-                  />
-                </div>
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-xl transform rotate-2"></div>
-                  <img 
-                    src={professionalPhoto4}
-                    alt="Dr. Abdul Sami at convocation ceremony" 
-                    className="relative w-full h-auto rounded-xl shadow-xl border-2 border-white"
-                    data-testid="hero-professional-photo-4"
-                  />
-                  <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg">
-                    <Microscope className="w-6 h-6 text-white" />
-                  </div>
+              <div className="relative max-w-md mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl transform rotate-3"></div>
+                <img 
+                  src={professionalPhoto1}
+                  alt="Dr. Abdul Sami professional headshot" 
+                  className="relative w-full h-auto rounded-2xl shadow-2xl border-4 border-white"
+                  data-testid="hero-professional-photo"
+                />
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg">
+                  <Microscope className="w-8 h-8 text-white" />
                 </div>
               </div>
             </div>
@@ -369,7 +340,22 @@ export default function Home() {
             {/* Bio Card */}
             <Card className="lg:col-span-2 shadow-lg">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold text-foreground mb-6">Professional Background</h3>
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0">
+                    <div className="relative w-32 h-32">
+                      <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-xl transform -rotate-2"></div>
+                      <img 
+                        src={professionalPhoto2}
+                        alt="Dr. Abdul Sami at university event" 
+                        className="relative w-full h-full object-cover rounded-xl shadow-lg border-2 border-white"
+                        data-testid="about-professional-photo"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-semibold text-foreground mb-4">Professional Background</h3>
+                  </div>
+                </div>
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
                   <p>
                     Dr. Abdul Sami is a distinguished Assistant Professor in the Department of Microbiology at Government College University Hyderabad. With extensive expertise in molecular biology, microbial fermentation, and biotechnology, he has established himself as a leading researcher and educator in the field.
@@ -554,11 +540,24 @@ export default function Home() {
       <section id="teaching" className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Teaching Experience</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6"></div>
-            <p className="text-lg text-muted-foreground">
-              Comprehensive curriculum delivery across undergraduate and graduate programs
-            </p>
+            <div className="flex flex-col items-center gap-6">
+              <div className="relative w-24 h-24">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full transform rotate-3"></div>
+                <img 
+                  src={professionalPhoto3}
+                  alt="Dr. Abdul Sami formal portrait" 
+                  className="relative w-full h-full object-cover rounded-full shadow-lg border-2 border-white"
+                  data-testid="teaching-professional-photo"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Teaching Experience</h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6"></div>
+                <p className="text-lg text-muted-foreground">
+                  Comprehensive curriculum delivery across undergraduate and graduate programs
+                </p>
+              </div>
+            </div>
           </div>
           
           {/* Teaching Timeline */}
@@ -844,10 +843,21 @@ export default function Home() {
             {/* Contact Information */}
             <Card className="shadow-lg">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
-                  <BookOpen className="w-6 h-6 text-primary" />
-                  Contact Information
-                </h3>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="relative w-16 h-16">
+                    <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg transform rotate-2"></div>
+                    <img 
+                      src={professionalPhoto4}
+                      alt="Dr. Abdul Sami at convocation ceremony" 
+                      className="relative w-full h-full object-cover rounded-lg shadow-md border-2 border-white"
+                      data-testid="contact-professional-photo"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-foreground flex items-center gap-3">
+                    <BookOpen className="w-6 h-6 text-primary" />
+                    Contact Information
+                  </h3>
+                </div>
                 
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
