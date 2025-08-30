@@ -28,7 +28,8 @@ import {
   FileText,
   ChevronLeft,
   ChevronRight,
-  Github
+  Github,
+  Twitter
 } from "lucide-react";
 import professionalPhoto1 from "@assets/WhatsApp Image 2025-08-25 at 18.52.08_95804655_1756534713837.jpg";
 import professionalPhoto2 from "@assets/WhatsApp Image 2025-08-25 at 21.52.10_8d0a8574_1756534713839.jpg";
@@ -299,6 +300,12 @@ export default function Home() {
                   <a href="https://github.com/abdulsamidahri" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
                     <Github className="w-4 h-4" />
                     <span>GitHub</span>
+                  </a>
+                </Button>
+                <Button variant="outline" asChild className="shadow-md" data-testid="hero-twitter-button">
+                  <a href="https://x.com/sameedahri" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                    <Twitter className="w-4 h-4" />
+                    <span>X</span>
                   </a>
                 </Button>
               </div>
@@ -922,6 +929,20 @@ export default function Home() {
                       </Button>
                     </div>
                   </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Twitter className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-foreground">X (Twitter)</p>
+                      <Button variant="link" asChild className="p-0 h-auto" data-testid="contact-twitter-link">
+                        <a href="https://x.com/sameedahri" target="_blank" rel="noopener noreferrer">
+                          x.com/sameedahri
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -1006,6 +1027,11 @@ export default function Home() {
               <Button size="sm" asChild className="rounded-full w-12 h-12" data-testid="footer-github-button">
                 <a href="https://github.com/abdulsamidahri" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button size="sm" asChild className="rounded-full w-12 h-12" data-testid="footer-twitter-button">
+                <a href="https://x.com/sameedahri" target="_blank" rel="noopener noreferrer">
+                  <Twitter className="w-5 h-5" />
                 </a>
               </Button>
             </div>
