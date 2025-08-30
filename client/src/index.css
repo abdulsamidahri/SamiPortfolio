@@ -51,11 +51,23 @@
   --spacing: 0.25rem;
 }
 
-/* Force solid navigation styling */
-nav.sticky {
-  background-color: white !important;
+/* Force solid navigation styling with highest priority */
+header[class*="fixed"] {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
+}
+
+header[class*="fixed"] * {
+  background: inherit !important;
+}
+
+/* Cache busting override */
+.nav-solid-override {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  opacity: 1 !important;
 }
 
 .dark {
