@@ -285,7 +285,7 @@ export default function Home() {
               </p>
               
               {/* Quick Contact */}
-              <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex flex-wrap gap-4 mb-8 text-center pl-[90px] pr-[90px]">
                 <Button asChild className="shadow-md" data-testid="hero-email-button">
                   <a href="mailto:abdulsamidahri@gcuh.edu.pk" className="inline-flex items-center gap-2">
                     <Mail className="w-4 h-4" />
