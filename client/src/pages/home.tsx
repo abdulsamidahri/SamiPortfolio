@@ -540,8 +540,8 @@ export default function Home() {
       <section id="teaching" className="py-20 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="flex flex-col items-center gap-6">
-              <div className="relative w-24 h-24">
+            <div className="flex flex-col items-center justify-center gap-6">
+              <div className="relative w-24 h-24 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full transform rotate-3"></div>
                 <img 
                   src={professionalPhoto3}
@@ -550,10 +550,10 @@ export default function Home() {
                   data-testid="teaching-professional-photo"
                 />
               </div>
-              <div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Teaching Experience</h2>
+              <div className="w-full">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-center">Teaching Experience</h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6"></div>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
                   Comprehensive curriculum delivery across undergraduate and graduate programs
                 </p>
               </div>
