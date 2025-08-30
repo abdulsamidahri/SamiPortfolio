@@ -274,7 +274,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in text-center">
-              <h1 className="lg:text-6xl font-bold text-foreground mb-4 text-[62px] text-left">
+              <h1 className="lg:text-6xl font-bold text-foreground mb-4 text-[62px] text-center">
                 Dr. <span className="text-slate-800">Abdul Sami</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground mb-6 font-bold">
