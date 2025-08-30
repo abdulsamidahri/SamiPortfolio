@@ -289,24 +289,53 @@ export default function Home() {
                   <div className="text-sm text-muted-foreground">Publications</div>
                 </Card>
                 <Card className="p-4">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">11+</div>
                   <div className="text-sm text-muted-foreground">Years Teaching</div>
                 </Card>
               </div>
             </div>
             
-            {/* Professional Photo */}
+            {/* Professional Photos Gallery */}
             <div className="animate-fade-in">
-              <div className="relative max-w-md mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl transform rotate-3"></div>
-                <img 
-                  src={professionalPhoto1}
-                  alt="Dr. Abdul Sami professional headshot" 
-                  className="relative w-full h-auto rounded-2xl shadow-2xl border-4 border-white"
-                  data-testid="hero-professional-photo"
-                />
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg">
-                  <Microscope className="w-8 h-8 text-white" />
+              <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl transform rotate-1"></div>
+                  <img 
+                    src={professionalPhoto1}
+                    alt="Dr. Abdul Sami professional headshot" 
+                    className="relative w-full h-auto rounded-xl shadow-xl border-2 border-white"
+                    data-testid="hero-professional-photo-1"
+                  />
+                </div>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-xl transform -rotate-1"></div>
+                  <img 
+                    src={professionalPhoto2}
+                    alt="Dr. Abdul Sami at university event" 
+                    className="relative w-full h-auto rounded-xl shadow-xl border-2 border-white"
+                    data-testid="hero-professional-photo-2"
+                  />
+                </div>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl transform -rotate-2"></div>
+                  <img 
+                    src={professionalPhoto3}
+                    alt="Dr. Abdul Sami formal portrait" 
+                    className="relative w-full h-auto rounded-xl shadow-xl border-2 border-white"
+                    data-testid="hero-professional-photo-3"
+                  />
+                </div>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-xl transform rotate-2"></div>
+                  <img 
+                    src={professionalPhoto4}
+                    alt="Dr. Abdul Sami at convocation ceremony" 
+                    className="relative w-full h-auto rounded-xl shadow-xl border-2 border-white"
+                    data-testid="hero-professional-photo-4"
+                  />
+                  <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg">
+                    <Microscope className="w-6 h-6 text-white" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -335,7 +364,7 @@ export default function Home() {
                     His research focuses on cutting-edge areas including microbial physiology, fermentation technology, and virology. Dr. Sami has contributed significantly to the scientific community through his numerous publications and active participation in professional organizations.
                   </p>
                   <p>
-                    As an educator, he brings both theoretical knowledge and practical expertise to his teaching, having instructed courses ranging from fundamental microbiology to advanced specialized topics.
+                    As an educator with over 11 years of teaching experience, he brings both theoretical knowledge and practical expertise to his teaching, having instructed courses ranging from fundamental microbiology to advanced specialized topics across undergraduate and graduate programs.
                   </p>
                 </div>
               </CardContent>
