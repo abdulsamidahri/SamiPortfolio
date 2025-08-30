@@ -35,6 +35,7 @@ import professionalPhoto1 from "@assets/WhatsApp Image 2025-08-25 at 18.52.08_95
 import professionalPhoto2 from "@assets/WhatsApp Image 2025-08-25 at 21.52.10_8d0a8574_1756534713839.jpg";
 import professionalPhoto3 from "@assets/WhatsApp Image 2025-08-25 at 21.54.13_cd79e550_1756534713838.jpg";
 import professionalPhoto4 from "@assets/WhatsApp Image 2025-08-25 at 22.05.36_4fdb53fa_1756534713837.jpg";
+import newHeroPhoto from "@assets/WhatsApp_Image_2025-08-25_at_22.05.36_4fdb53fa-removebg-preview_1756539384214.png";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -328,9 +329,9 @@ export default function Home() {
             <div className="animate-fade-in">
               <div className="relative max-w-md mx-auto">
                 <img 
-                  src={professionalPhoto1}
-                  alt="Dr. Abdul Sami professional headshot" 
-                  className="w-full h-auto rounded-2xl border-4 border-white"
+                  src={newHeroPhoto}
+                  alt="Dr. Abdul Sami professional portrait" 
+                  className="w-full h-auto rounded-2xl"
                   data-testid="hero-professional-photo"
                 />
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center">
@@ -358,8 +359,8 @@ export default function Home() {
                     <div className="relative w-32 h-32">
                       <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-xl transform -rotate-2"></div>
                       <img 
-                        src={professionalPhoto2}
-                        alt="Dr. Abdul Sami at university event" 
+                        src={professionalPhoto1}
+                        alt="Dr. Abdul Sami professional headshot" 
                         className="relative w-full h-full object-cover rounded-xl shadow-lg border-2 border-white"
                         data-testid="about-professional-photo"
                       />
