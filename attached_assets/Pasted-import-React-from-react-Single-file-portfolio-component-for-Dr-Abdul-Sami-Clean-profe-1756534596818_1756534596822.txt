@@ -1,0 +1,461 @@
+import React from "react";
+
+// Single-file portfolio component for Dr. Abdul Sami
+// Clean, professional, with a light summer vibe in thin water-blue tones.
+// Tailwind CSS utility classes are used throughout.
+// This component is designed to be dropped into a modern React app.
+
+// If your app doesn't already include Tailwind, follow https://tailwindcss.com/docs/guides/vite
+// Fonts are kept system-default for professional clarity.
+
+export default function DrAbdulSamiPortfolio() {
+  const email = "abdulsamidahri@gcuh.edu.pk";
+  const phone = "+92 333 3979737";
+
+  const researchInterests = [
+    "Molecular Biology",
+    "Microbial fermentation & physiology (Bacteria and fungi)",
+    "Fermentation Technology (aerobic/anaerobic; batch & fed-batch)",
+    "Virology",
+    "Biotechnology",
+  ];
+
+  const specialties = [
+    "Statistical experimental design & analysis",
+    "Hands-on wet-lab & data workflows",
+    "Graduate and postgraduate instruction",
+    "Technical leadership & communication",
+  ];
+
+  const memberships = [
+    "American Society for Microbiology",
+    "Microbiology Society (UK)",
+    "Medical Microbiology & Infectious Diseases Society of Pakistan",
+    "Pakistan Biological Safety Association (PBSA)",
+    "Member, Senate at Government College University Hyderabad",
+  ];
+
+  const duties = [
+    "Focal Person BS Microbiology Program",
+    "Convener, Board of Studies (BS Microbiology)",
+    "Focal Person, Department of Botany",
+    "Member, Library Committee (GCUH)",
+    "Member, QEC Committee (GCUH)",
+    "Tabulator Examination, Office of Controller Examinations (GCUH)",
+  ];
+
+  const awards = [
+    "2nd National Symposium on New Trends & Advancement in Microbiology — University of Sindh Jamshoro",
+    "Career counselling (iLearn × Sports & Youth Affairs Dept., Govt. of Sindh)",
+    "Health & Safety Environment — Institute of Environmental Engineering, MUET",
+    "Biohacking Your Brain's Health — Emory University (Coursera)",
+    "Manuscript Writing — ORIC (MRC, LUMHS)",
+    "WHO: COVID‑19 Operational Planning; SARI Treatment Facility Design",
+    "HEC: The Art of Academic Honesty: Plagiarism Unpacked",
+    "Hands‑on Training: Genomics & Bioinformatics",
+    "Multiple faculty development workshops (2022–2024)",
+  ];
+
+  const teaching = [
+    { year: 2025, courses: ["Soil Microbiology", "Immunology", "Fundamentals of Microbiology I"] },
+    { year: 2024, courses: ["Fundamentals of Microbiology II", "EDU‑3631 General Science", "Dynamics of Natural Science"] },
+    { year: 2023, courses: ["EDU‑3631 General Science", "BOT‑3563 Mycology & Plant Pathology", "BOT‑3331 Plant Nutrition", "BOT‑3669 Plant Biochemistry I", "BOT‑3439 Environmental Sciences", "BOT‑3883 Environmental Biology"] },
+    { year: 2022, courses: ["BOT‑3551 Bacteriology & Virology", "BOT‑3439 Environmental Sciences", "BOT‑3671 Plant Physiology I"] },
+    { year: 2021, courses: ["BOT‑3439 Environmental Sciences"] },
+    { year: 2020, courses: ["BOT‑3227 Applied Microbiology"] },
+  ];
+
+  const publications2025 = [
+    {
+      title:
+        "Prevalence of Malaria in Human Population of District Hyderabad Sindh, Pakistan",
+      authors:
+        "Dr Shakeel Ahmed Memon, Dr. Bakhtawar Soomro, Mr. Asim Patrick, & Abdul Sami",
+      venue: "Physical Education, Health and Social Sciences 3(2):59–62 (2025)",
+      link: "https://doi.org/10.63163/jpehss.v3i2.410",
+    },
+    {
+      title:
+        "Prevalence of Cutaneous Leishmaniasis among the Local Population of South Waziristan District, Khyber Pakhtunkhwa, Pakistan",
+      authors: "Soomro, B., Memon, S. A., Sami, A., & Patrick, A.",
+      venue:
+        "Open Access Public Health and Health Administration Review 3(2):147–155 (2025)",
+    },
+    {
+      title:
+        "An Investigation into the Critical Public Health Issue: Incidence of Enteric (Typhoid) Fever among Febrile Patients",
+      authors: "Soomro, B., Sami, A., & Patrick, A.",
+      venue:
+        "Open Access Public Health and Health Administration Review 3(2):123–129 (2025)",
+    },
+    {
+      title:
+        "Synthesis of Polyvinylpyrrolidone Nanoparticle and its Antimicrobial Susceptibilities",
+      authors:
+        "Lakhan, M. A., Khokhar, S. A., Ata, M. A., Aqil, M., Patrick, A., Dahri, A. S., ... & Unar, A.",
+      venue: "Annual Methodological Archive Research Review 3(4):477–490 (2025)",
+    },
+    {
+      title:
+        "Quorum Sensing Signaling Molecules and Antibiotic Resistance Profiles of Pseudomonas aeruginosa AS006 and AS008",
+      authors:
+        "Patrick, A., MirJatt, A. N., Memon, S. B., Qureshi, A. S., Khushik, F. A., Khand, A. A., & Dahri, A. S.",
+      venue: "Journal of Microbiological Sciences 4(1):70–75 (2025)",
+    },
+    {
+      title:
+        "Artificial Intelligence and Its Transformative Role in Microbiology",
+      authors: "Dahri, A. S., Ahmed, S., Patrick, A., Shaikh, A. A., & Qureshi, M. A.",
+      venue:
+        "Review Journal of Neurological & Medical Sciences Review 3(1):1–7 (2025)",
+      link: "https://doi.org/10.62019/nk9mpt79",
+    },
+    {
+      title:
+        "Evaluation of Chemical Makeup and Microbiological Parameters of Raw Milk in Hyderabad, Pakistan",
+      authors: "Dahri, A. S., Patrick, A., Ali, A., & Aqil, M.",
+      venue:
+        "International Journal of Agriculture Innovations and Cutting‑Edge Research 3(1):15–20 (2025)",
+    },
+  ];
+
+  const publicationsEarlier = [
+    {
+      title:
+        "The Chemical Composition and Quality Analysis of Commercially Sold Milk in Hyderabad, Pakistan",
+      authors: "Abdul Sami Dahri, Asim Patrick, Asghar Ali, Muhammad Aqil",
+      venue:
+        "Review Journal of Neurological & Medical Sciences Review 2(4):21–25 (2024)",
+      link: "https://doi.org/10.62019/13v32x64",
+    },
+    {
+      title:
+        "Antimicrobial Activity of Polyvinyl Alcohol Incorporating Bismuth‑Zinc Oxide Nanocomposite",
+      authors:
+        "Mashooque A. Lakhan, Mazhar I. Khaskheli, Abdul Sami Dahri, Asghar Ali, Naveed A. Qambrani, Asim Patrick",
+      venue:
+        "Rev. J. Neurol. & Med. Sci. Rev. 2(4):26–38 (2024)",
+    },
+    {
+      title:
+        "Antibiotic Resistance Patterns of Pseudomonas aeruginosa from Clinical Samples",
+      authors: "Soomro, Q. A., Nabi, A., Tunio, S. A., Qureshi, A. S., Brohi, N. A., Khushik, F. A., ... & Patrick, A.",
+      venue: "Pakistan Journal of Health Sciences (2024)",
+    },
+    {
+      title:
+        "Bioactive compounds, antioxidant and antimicrobial attributes of Cordia sinensis Lam.",
+      authors:
+        "Shaikh, A. A., Naqvi, S. H. A., Siddiqui, K., Korejo, F., Palh, Z. A., Dahri, A. S., ... & Ali, S.",
+      venue: "Journal of Applied Research in Plant Sciences 5(2):170–182 (2024)",
+    },
+    {
+      title:
+        "N‑acyl homoserine lactone QS & alginate lyase in Grimontia marina AS01 and Alteromonas",
+      authors:
+        "Abbassi, S. M., Dahri, A. S., Ahmed, Y. Z., Jatt, A. N., Tunio, S. A., Qureshi, A. S., & Memon, S. B.",
+      venue: "Pakistan Journal of Science 74(1):25–31 (2023)",
+    },
+    {
+      title:
+        "Screening of Vibrio alginolyticus strain AS05 for AHL-based quorum sensing",
+      venue: "Pakistan Journal of Science 74(1‑1):7–11 (2023)",
+    },
+    {
+      title:
+        "AHL-based quorum sensing and regulation of extracellular enzymes in marine snow-associated bacteria",
+      authors:
+        "Abdul Nabi Jatt, Abdul Sattar Qureshi, Abdul Sami Dahri",
+      venue:
+        "Pakistan Journal of Zoology (2023) DOI: 10.17582/journal.pjz/20230118140133",
+    },
+    {
+      title:
+        "Comparison of in‑vitro efficacy of antibiotics against 103 clinical isolates of Pseudomonas aeruginosa",
+      venue: "Journal of Critical Reviews 8(02):1740–1743 (2021)",
+    },
+    {
+      title:
+        "Seroprevalence of HIV among injecting drug users in District Sanghar, Sindh, Pakistan",
+      venue: "Rawal Medical Journal 45(4):758 (2020)",
+    },
+    {
+      title:
+        "Evaluation of lactic acid bacteria in different types of yogurt consumed in Pakistan",
+      venue: "Pakistan Journal of Biotechnology 17(3):149–153 (2020)",
+    },
+    {
+      title:
+        "Nurses’ job satisfaction & burnout",
+      venue: "Journal of Managerial Sciences 13(2) (2019)",
+    },
+  ];
+
+  const experience = [
+    { role: "Assistant Professor", org: "Government College University Hyderabad", start: "24‑02‑2025", end: "Present" },
+    { role: "Lecturer", org: "Government College University Hyderabad", start: "30‑09‑2020", end: "24‑02‑2025" },
+    { role: "Lecturer", org: "College Education Department, Govt. of Sindh", start: "03‑02‑2014", end: "30‑09‑2020" },
+    { role: "Microbiologist (Intern)", org: "Novartis Pharma", start: "—", end: "—" },
+  ];
+
+  const referees = [
+    {
+      name: "Prof. Dr. Sarfaraz Ali",
+      role: "Institute of Microbiology, Univ. of Sindh",
+      phone: "+92 332 2604610",
+      email: "sarfraz.tunio@usindh.edu.pk",
+    },
+    {
+      name: "Dr. Abdul Nabi Mirjut",
+      role: "Assistant Professor, Institute of Microbiology, Univ. of Sindh",
+      phone: "+92 333 1237814",
+      email: "abdul.nabi@usindh.edu.pk",
+    },
+    {
+      name: "Prof. Dr. Shakeel Ahmed",
+      role: "Department of Zoology, GCU Hyderabad",
+      phone: "+92 300 3069383",
+      email: "shakeelahmed.memon@gcuh.edu.pk",
+    },
+  ];
+
+  return (
+    <main className="min-h-screen text-slate-800 bg-gradient-to-b from-cyan-50 via-sky-50 to-sky-100">
+      {/* Top wave header */}
+      <header className="relative overflow-hidden">
+        <div className="absolute inset-0 opacity-70 pointer-events-none" aria-hidden>
+          <svg className="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path
+              fill="url(#grad)"
+              fillOpacity="1"
+              d="M0,64L48,80C96,96,192,128,288,160C384,192,480,224,576,202.7C672,181,768,107,864,85.3C960,64,1056,96,1152,128C1248,160,1344,192,1392,208L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            />
+            <defs>
+              <linearGradient id="grad" x1="0" x2="1">
+                <stop offset="0%" stopColor="#A7F3D0" />
+                <stop offset="50%" stopColor="#7DD3FC" />
+                <stop offset="100%" stopColor="#38BDF8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div className="relative max-w-6xl mx-auto px-6 pt-10 pb-16">
+          <div className="flex flex-col md:flex-row items-start md:items-end gap-6">
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-slate-900">
+                Dr. Abdul Sami
+              </h1>
+              <p className="mt-2 text-lg md:text-xl text-slate-700">
+                Assistant Professor, Department of Microbiology — Government College University Hyderabad
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3 text-sm">
+                <a
+                  href={`mailto:${email}`}
+                  className="inline-flex items-center rounded-full bg-white/80 backdrop-blur px-4 py-2 ring-1 ring-sky-200 hover:ring-sky-300 hover:bg-white transition"
+                >
+                  {email}
+                </a>
+                <a
+                  href={`tel:${phone.replaceAll(' ', '')}`}
+                  className="inline-flex items-center rounded-full bg-white/80 backdrop-blur px-4 py-2 ring-1 ring-sky-200 hover:ring-sky-300 hover:bg-white transition"
+                >
+                  {phone}
+                </a>
+              </div>
+            </div>
+            <div className="flex-none grid grid-cols-2 gap-3 text-xs text-slate-600">
+              {researchInterests.slice(0, 4).map((chip) => (
+                <span
+                  key={chip}
+                  className="px-3 py-2 rounded-2xl bg-white/70 ring-1 ring-sky-200"
+                >
+                  {chip}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Content */}
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Left column */}
+          <aside className="lg:col-span-1 space-y-8">
+            <Card title="About">
+              <p>
+                A reliable, enthusiastic academic and microbiologist with 10+ years of teaching
+                experience at graduate and postgraduate levels. Strong analytical and problem‑solving
+                skills with proven technical leadership.
+              </p>
+            </Card>
+
+            <Card title="Research Interests">
+              <ul className="list-disc pl-5 space-y-1">
+                {researchInterests.map((x) => (
+                  <li key={x}>{x}</li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card title="Specialties">
+              <ul className="list-disc pl-5 space-y-1">
+                {specialties.map((x) => (
+                  <li key={x}>{x}</li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card title="Memberships">
+              <ul className="list-disc pl-5 space-y-1">
+                {memberships.map((x) => (
+                  <li key={x}>{x}</li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card title="Duties & Service">
+              <ul className="list-disc pl-5 space-y-1">
+                {duties.map((x) => (
+                  <li key={x}>{x}</li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card title="Editorial & Events">
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Editorial Board — Journal of Population Therapeutics & Clinical Pharmacology</li>
+                <li>Organizer — Workshop on scope & prospects of Microbiology</li>
+                <li>Organizer — Industrial study tour (Pakistan Beverage Limited)</li>
+              </ul>
+            </Card>
+          </aside>
+
+          {/* Right column */}
+          <div className="lg:col-span-2 space-y-8">
+            <Card title="Experience">
+              <ol className="relative border-s border-sky-200">
+                {experience.map((e, i) => (
+                  <li key={i} className="ms-6 py-4">
+                    <span className="absolute -start-2 top-6 h-4 w-4 rounded-full bg-sky-400 ring-4 ring-sky-100" />
+                    <h3 className="font-medium text-slate-900">{e.role}</h3>
+                    <p className="text-slate-700">{e.org}</p>
+                    <p className="text-sm text-slate-600">{e.start} — {e.end}</p>
+                  </li>
+                ))}
+              </ol>
+            </Card>
+
+            <Card title="Selected Publications (2025)">
+              <ul className="space-y-4">
+                {publications2025.map((p, i) => (
+                  <li key={i} className="">
+                    <p className="font-medium text-slate-900">{p.title}</p>
+                    <p className="text-sm text-slate-700">{p.authors}</p>
+                    <p className="text-sm text-slate-600">{p.venue}</p>
+                    {p.link && (
+                      <a href={p.link} className="text-sm text-sky-700 underline">DOI / Link</a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card title="Earlier Publications & Articles">
+              <ul className="space-y-4">
+                {publicationsEarlier.map((p, i) => (
+                  <li key={i}>
+                    <p className="font-medium text-slate-900">{p.title}</p>
+                    {p.authors && (
+                      <p className="text-sm text-slate-700">{p.authors}</p>
+                    )}
+                    <p className="text-sm text-slate-600">{p.venue}</p>
+                    {p.link && (
+                      <a href={p.link} className="text-sm text-sky-700 underline">DOI / Link</a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card title="Teaching (Selected)">
+              <div className="grid md:grid-cols-2 gap-4">
+                {teaching.map((t) => (
+                  <div key={t.year} className="rounded-xl bg-white/70 ring-1 ring-sky-200 p-4">
+                    <p className="font-medium text-slate-900">{t.year}</p>
+                    <ul className="list-disc pl-5 text-sm mt-1 space-y-1">
+                      {t.courses.map((c) => (
+                        <li key={c}>{c}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </Card>
+
+            <Card title="Professional Development (Highlights)">
+              <ul className="list-disc pl-5 space-y-1">
+                {awards.map((x) => (
+                  <li key={x}>{x}</li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card title="Referees">
+              <div className="grid md:grid-cols-3 gap-4">
+                {referees.map((r) => (
+                  <div key={r.email} className="rounded-xl bg-white/70 ring-1 ring-sky-200 p-4">
+                    <p className="font-medium text-slate-900">{r.name}</p>
+                    <p className="text-sm text-slate-700">{r.role}</p>
+                    <p className="text-sm text-slate-600">{r.phone}</p>
+                    <a href={`mailto:${r.email}`} className="text-sm text-sky-700 underline">
+                      {r.email}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-sky-200/60 bg-white/60 backdrop-blur">
+        <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+          <p>
+            © {new Date().getFullYear()} Dr. Abdul Sami — Department of Microbiology, GCU Hyderabad
+          </p>
+          <div className="flex gap-3">
+            <a
+              href={`mailto:${email}`}
+              className="inline-flex items-center rounded-full px-4 py-2 ring-1 ring-sky-200 hover:ring-sky-300"
+            >
+              Contact
+            </a>
+            <a
+              href="#top"
+              className="inline-flex items-center rounded-full px-4 py-2 ring-1 ring-sky-200 hover:ring-sky-300"
+            >
+              Back to top
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+function Card({ title, children }) {
+  return (
+    <section className="rounded-3xl bg-white/70 backdrop-blur ring-1 ring-sky-200 shadow-sm">
+      <div className="p-5 md:p-6">
+        <h2 className="text-xl font-semibold tracking-tight text-slate-900 mb-3">
+          {title}
+        </h2>
+        <div className="prose prose-slate max-w-none">
+          {children}
+        </div>
+      </div>
+    </section>
+  );
+}
