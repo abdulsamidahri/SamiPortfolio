@@ -280,7 +280,7 @@ export default function Home() {
               <p className="text-xl lg:text-2xl text-muted-foreground mb-6 font-bold">
                 Assistant Professor, Department of Microbiology
               </p>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground mb-8 font-semibold">
                 Government College University Hyderabad
               </p>
               
