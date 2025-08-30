@@ -547,7 +547,7 @@ export default function Home() {
                   <img 
                     src={professionalPhoto3}
                     alt="Dr. Abdul Sami formal portrait" 
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-top scale-110"
                     data-testid="teaching-professional-photo"
                   />
                 </div>
