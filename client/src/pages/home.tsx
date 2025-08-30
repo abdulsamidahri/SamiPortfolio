@@ -848,12 +848,14 @@ export default function Home() {
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative w-16 h-16">
                     <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg transform rotate-2"></div>
-                    <img 
-                      src={professionalPhoto4}
-                      alt="Dr. Abdul Sami at convocation ceremony" 
-                      className="relative w-full h-full object-cover rounded-lg shadow-md border-2 border-white"
-                      data-testid="contact-professional-photo"
-                    />
+                    <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md border-2 border-white bg-white">
+                      <img 
+                        src={professionalPhoto4}
+                        alt="Dr. Abdul Sami at convocation ceremony" 
+                        className="w-full h-full object-cover object-top scale-110"
+                        data-testid="contact-professional-photo"
+                      />
+                    </div>
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground flex items-center gap-3">
                     <BookOpen className="w-6 h-6 text-primary" />
