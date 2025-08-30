@@ -201,8 +201,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Sticky Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/100 border-b border-border shadow-lg backdrop-blur-none" style={{ backgroundColor: 'white' }}>
+      {/* Solid Navigation Bar */}
+      <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="font-semibold text-foreground">Dr. Abdul Sami</div>
@@ -236,7 +236,7 @@ export default function Home() {
         
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-border">
+          <div className="md:hidden" style={{ backgroundColor: '#ffffff', borderTop: '1px solid #e2e8f0' }}>
             <div className="px-4 py-3 space-y-3">
               {navLinks.map((link) => (
                 <a 
@@ -251,7 +251,10 @@ export default function Home() {
             </div>
           </div>
         )}
-      </nav>
+      </header>
+      
+      {/* Add top padding to account for fixed header */}
+      <div className="pt-16"></div>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-primary/10 via-accent/10 to-primary/15">
